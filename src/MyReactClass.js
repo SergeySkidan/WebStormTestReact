@@ -1,31 +1,43 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+let message = '';
 
 export default class MyReactClass extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            count: this.props.initialCount
+            count: 1
         };
     }
 
-    upCount() {
-        this.setState((prevState) => ({
-            count: prevState.count + 1
-        }));
+    onClick(e) {
+        this.setState({
+            count: this.state.count + 1
+        });
+
+         message = 1;
+
+        if(+this.state.count == 1){
+            message = this.state.count + ' раз';
+        }
+        if(+this.state.count == 2||+this.state.count == 3||+this.state.count == 4){
+            message = this.state.count + ' раза';
+        }
+        if(+this.state.count >= 5){
+            message = this.state.count + ' раз';
+        }
     }
+
+
+
 
     render() {
         return (
             <div>
-                Hello, {this.props.name}!<br />
-                You clicked the button {this.state.count} times.<br />
-                <button onClick={this.upCount}>Click here!</button>
+
+                <h2>Кнопка нажата {message} </h2>
+                <button onClick={this.onClick.bind(this)}>Нажми</button>
             </div>
-        );
+        )
     }
 }
-MyReactClass.defaultProps = {
-    name: 'Bob',
-    initialCount: 0
-};
