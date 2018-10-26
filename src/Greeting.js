@@ -19,7 +19,7 @@ componentDidMount(){
 render(){
     return(
         <div>
-            <h2>Hello {this.state.name}</h2>
+            <h5>Hello {this.state.name}</h5>
         </div>
     )
 }

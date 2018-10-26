@@ -28,10 +28,12 @@ class App extends Component {
                 <Counter>
                     {state =>(
                         <div>
-                            <h2>The count is {state.count}</h2>
+                            <h5>The count is {state.count}</h5>
                         </div>
                     )}
                 </Counter>
+
+
 
             </header>
         </div>
