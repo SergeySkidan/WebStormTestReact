@@ -22,11 +22,10 @@ export default class CommentsListContainer extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                    Name:
+            <form onSubmit={this.handleSubmit}> Name: &ensp;
+
                     <input type="text" value={this.state.value} onChange={this.handleChange} />
-                </label>
+
                 <input type="submit" value="Submit" />
             </form>
         );

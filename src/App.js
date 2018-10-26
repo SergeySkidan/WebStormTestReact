@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 
-import FirstComponent from './FirstComponent';
-import SecondComponent from './SecondComponent';
+
 import ManagedControlDemo from './ManagedControlDemo';
 import MyReactClass from './MyReactClass';
 import CommentsListContainer from './CommentsListContainer';
+import Greeting from './Greeting';
+import Counter from './Counter';
 
 
 import './App.css';
@@ -17,14 +18,20 @@ class App extends Component {
             <header className="App-header">
 
                 <CommentsListContainer />
-                <p></p>
-                <FirstComponent />
-                <p></p>
-                <SecondComponent />
-                <p></p>
+
                 <ManagedControlDemo/>
-                <p></p>
+
                 <MyReactClass/>
+
+                <Greeting/>
+
+                <Counter>
+                    {state =>(
+                        <div>
+                            <h2>The count is {state.count}</h2>
+                        </div>
+                    )}
+                </Counter>
 
             </header>
         </div>

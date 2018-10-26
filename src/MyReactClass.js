@@ -15,16 +15,14 @@ export default class MyReactClass extends React.Component {
             count: this.state.count + 1
         });
 
-         message = 1;
-
         if(+this.state.count == 1){
-            message = this.state.count + ' раз';
+            message = this.state.count + ' раз ';
         }
         if(+this.state.count == 2||+this.state.count == 3||+this.state.count == 4){
-            message = this.state.count + ' раза';
+            message = this.state.count + ' раза ';
         }
         if(+this.state.count >= 5){
-            message = this.state.count + ' раз';
+            message = this.state.count + ' раз ';
         }
     }
 
@@ -34,8 +32,7 @@ export default class MyReactClass extends React.Component {
     render() {
         return (
             <div>
-
-                <h2>Кнопка нажата {message} </h2>
+                Кнопка нажата {message}
                 <button onClick={this.onClick.bind(this)}>Нажми</button>
             </div>
         )
