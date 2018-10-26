@@ -13,7 +13,8 @@ export default class ManagedControlDemo extends React.Component {
     render() {
         return (
             <div>
-                Type something here &ensp;
+                {/*  &ensp  добавляет двойной пробел */}
+                Введите что-нибудь &ensp;
                 <input
                     onChange={this.handleChange.bind(this)}
                     value={this.state.message}

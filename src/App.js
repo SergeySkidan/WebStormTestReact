@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 
 
-import ManagedControlDemo from './ManagedControlDemo';
-import MyReactClass from './MyReactClass';
-import CommentsListContainer from './CommentsListContainer';
-import Greeting from './Greeting';
-import Counter from './Counter';
+import ManagedControlDemo from './components/ManagedControlDemo';
+import MyReactClass from './components/MyReactClass';
+import CommentsListContainer from './components/CommentsListContainer';
+import Greeting from './components/Greeting';
+import Counter from './components/Counter';
 
 
 import './App.css';
@@ -23,15 +23,17 @@ class App extends Component {
 
                 <MyReactClass/>
 
-                <Greeting/>
-
                 <Counter>
                     {state =>(
                         <div>
-                            <h5>The count is {state.count}</h5>
+                            Счетчик кликов по надписи {state.count}
                         </div>
                     )}
                 </Counter>
+
+                <Greeting/>
+
+
 
 
 
